@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import DeliveryForm from './components/DeliveryForm/DeliveryForm';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/delivery" element={<DeliveryForm />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

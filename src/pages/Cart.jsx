@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../components/CartItem/CartItem';
 import { clearItems } from '../redux/slices/cartSlice';
+import DeliveryForm from '../components/DeliveryForm/DeliveryForm';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const Cart = () => {
 
   return (
     <div className="container container--cart">
+      {/* <DeliveryForm/> */}
       <div className="cart">
         <div className="cart__top">
           <h2 className="content__title">
@@ -120,9 +122,9 @@ const Cart = () => {
               </svg>
               <span>Back to Home</span>
             </Link>
-            <div className="button pay-btn">
+            <Link to="/delivery" className="button pay-btn">
               <span>Pay Now</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
